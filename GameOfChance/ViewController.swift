@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class ViewController: UITableViewController {
 
@@ -14,6 +16,8 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        let ref = Database.database().reference(fromURL: "https://gameofchance-bf112.firebaseio.com/")
+      ref.updateChildValues(["Some value" : 123123])
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
     }
     

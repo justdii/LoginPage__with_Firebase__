@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginController: UIViewController {
     
@@ -19,15 +20,49 @@ class LoginController: UIViewController {
         return view
     }()
     
-    let loginRegisterButton: UIButton = {
+    lazy var loginRegisterButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = UIColor(r: 80, g:101, b: 161)
         button.setTitle("Register", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(UIColor.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        
+        button.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
         return button
     }()
+    
+    @objc func handleRegister(){
+        guard let name = nameTextField.text, let email = emailTextField.text, let password = passwordTextField.text else {
+            print("Zapolni formy")
+            return
+        }
+        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+            
+            if error != nil {
+                print(error!)
+            }
+            
+            guard let uid = user?.user.uid else{
+                return
+            }
+            
+            let ref = Database.database().reference(fromURL: "https://gameofchance-bf112.firebaseio.com/")
+            let usersReference = ref.child("users").child(uid)
+            let values = ["name": name, "email": email]
+            usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
+                
+                if err != nil {
+                    print(err!)
+                    return
+                }
+                
+                print("Norm sofranil")
+                
+            })
+            
+        })
+    }
     
     let nameTextField: UITextField = {
        let tf = UITextField()

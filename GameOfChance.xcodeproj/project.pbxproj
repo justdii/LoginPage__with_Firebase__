@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		026ACC9F2253DA8100C296F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 026ACC9E2253DA8100C296F8 /* GoogleService-Info.plist */; };
 		028B809E22527582001D270E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028B809D22527582001D270E /* LoginController.swift */; };
 		02C96EBC2252726600D67776 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C96EBB2252726600D67776 /* AppDelegate.swift */; };
 		02C96EBE2252726600D67776 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C96EBD2252726600D67776 /* ViewController.swift */; };
 		02C96EC12252726600D67776 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C96EBF2252726600D67776 /* Main.storyboard */; };
 		02C96EC32252726800D67776 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C96EC22252726800D67776 /* Assets.xcassets */; };
 		02C96EC62252726800D67776 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C96EC42252726800D67776 /* LaunchScreen.storyboard */; };
+		7CC277E0300D37096359E624 /* Pods_GameOfChance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B28CC240D1C9186B4E05B03 /* Pods_GameOfChance.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		026ACC9E2253DA8100C296F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		028B809D22527582001D270E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		02C96EB82252726600D67776 /* GameOfChance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfChance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C96EBB2252726600D67776 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		02C96EC22252726800D67776 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02C96EC52252726800D67776 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02C96EC72252726800D67776 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06244F75BC2DA9BD178EA27B /* Pods-GameOfChance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfChance.release.xcconfig"; path = "Target Support Files/Pods-GameOfChance/Pods-GameOfChance.release.xcconfig"; sourceTree = "<group>"; };
+		3B28CC240D1C9186B4E05B03 /* Pods_GameOfChance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameOfChance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64A43130DF9D3A2E4341E249 /* Pods-GameOfChance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfChance.debug.xcconfig"; path = "Target Support Files/Pods-GameOfChance/Pods-GameOfChance.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CC277E0300D37096359E624 /* Pods_GameOfChance.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +57,8 @@
 			children = (
 				02C96EBA2252726600D67776 /* GameOfChance */,
 				02C96EB92252726600D67776 /* Products */,
+				C745FFAC6E783C86F92B5449 /* Pods */,
+				1BC941B64408416049C414DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,8 +80,27 @@
 				02C96EC22252726800D67776 /* Assets.xcassets */,
 				02C96EC42252726800D67776 /* LaunchScreen.storyboard */,
 				02C96EC72252726800D67776 /* Info.plist */,
+				026ACC9E2253DA8100C296F8 /* GoogleService-Info.plist */,
 			);
 			path = GameOfChance;
+			sourceTree = "<group>";
+		};
+		1BC941B64408416049C414DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B28CC240D1C9186B4E05B03 /* Pods_GameOfChance.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C745FFAC6E783C86F92B5449 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64A43130DF9D3A2E4341E249 /* Pods-GameOfChance.debug.xcconfig */,
+				06244F75BC2DA9BD178EA27B /* Pods-GameOfChance.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02C96ECA2252726800D67776 /* Build configuration list for PBXNativeTarget "GameOfChance" */;
 			buildPhases = (
+				D540400E5B1D276CE2830809 /* [CP] Check Pods Manifest.lock */,
 				02C96EB42252726600D67776 /* Sources */,
 				02C96EB52252726600D67776 /* Frameworks */,
 				02C96EB62252726600D67776 /* Resources */,
+				88367DDCADD245A3D268B3C6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,12 +164,66 @@
 			buildActionMask = 2147483647;
 			files = (
 				02C96EC62252726800D67776 /* LaunchScreen.storyboard in Resources */,
+				026ACC9F2253DA8100C296F8 /* GoogleService-Info.plist in Resources */,
 				02C96EC32252726800D67776 /* Assets.xcassets in Resources */,
 				02C96EC12252726600D67776 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		88367DDCADD245A3D268B3C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameOfChance/Pods-GameOfChance-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GameOfChance/Pods-GameOfChance-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D540400E5B1D276CE2830809 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameOfChance-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		02C96EB42252726600D67776 /* Sources */ = {
@@ -292,6 +376,7 @@
 		};
 		02C96ECB2252726800D67776 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64A43130DF9D3A2E4341E249 /* Pods-GameOfChance.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -310,6 +395,7 @@
 		};
 		02C96ECC2252726800D67776 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06244F75BC2DA9BD178EA27B /* Pods-GameOfChance.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
